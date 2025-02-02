@@ -46,12 +46,13 @@
 // export default CategoriesList;
 "use client";
 
-import { getCategories, updateCategory, deleteCategory } from "@/firebase/firebaseServices";
+import { getCategories, updateCategory, deleteCategory, categoriesProducts } from "@/firebase/firebaseServices";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function CategoriesList({ categories, setCategories }) {
+  const [products,setProducts] = useState([])
   const [editingId, setEditingId] = useState(null);
   const [newCategoryName, setNewCategoryName] = useState("");
   const [originalCategoryName, setOriginalCategoryName] = useState("");
@@ -113,6 +114,14 @@ function CategoriesList({ categories, setCategories }) {
     }
   };
 
+  const handleClick =async (categoryId) => {
+  
+    const products=await categoriesProducts(categoryId)
+    console.log(products)
+    
+
+  }
+
   return (
     <div className="p-4 w-full lg:w-1/2">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">Categorías</h2>
@@ -130,7 +139,12 @@ function CategoriesList({ categories, setCategories }) {
                 className="border border-gray-300 rounded-md p-2 w-full"
               />
             ) : (
-              <h3 className="text-lg font-semibold text-gray-700">{category.category}</h3>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-700">{category.category}</h3>
+                <h3 className="text-lg font-semibold text-gray-700">{category.id}</h3>
+                
+              </div>
+              
             )}
 
             <div className="flex gap-2">
@@ -162,6 +176,13 @@ function CategoriesList({ categories, setCategories }) {
                     onClick={() => handleDelete(category.id)}
                   >
                     Eliminar
+                  </button>
+                  <button 
+                  className="px-3 py-1 text-sm text-white bg-green-500 rounded-md hover:bg-green-600 transition"
+                  onClick={() => handleClick(category.id)}
+                  >
+
+                    Ver productos 
                   </button>
                 </>
               )}
