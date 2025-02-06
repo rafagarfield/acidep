@@ -129,7 +129,12 @@ export const addProduct = async (product) => {
       createdAt: new Date(),
     };
 
-    await addDoc(productRef, newProduct);
+    const result= await addDoc(productRef, newProduct);
+    const productId = result.id;
+    const productsRefId=doc(db,"products",productId)
+    await updateDoc(productsRefId,{productId});
+    console.log("ref",productId)
+    
     console.log("✅ Producto agregado correctamente");
   } catch (error) {
     console.error("❌ Error agregando producto:", error);
@@ -218,6 +223,15 @@ export const deleteProduct = async (productId, productData) => {
 export const categoriesProducts = async (categoryId) => {
   const citiesRef = collection(db, "products");
   const q = query(citiesRef, where("categoryId", "==", categoryId));
+  const productsCategory = await getDocs(q);
+  const product= productsCategory.docs.map((doc) => doc.data())
+  return product;
+};
+
+
+export const getProductById = async (productId) => {
+  const citiesRef = collection(db, "products");
+  const q = query(citiesRef, where("productId", "==", productId));
   const productsCategory = await getDocs(q);
   const product= productsCategory.docs.map((doc) => doc.data())
   return product;
