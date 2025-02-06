@@ -38,14 +38,18 @@
 
 import { Carousel } from '@/components/Carousel/Carousel'
 import FeaturesBanner from '@/components/FeaturesBanner/FeaturesBanner'
+import Footer from '@/components/Footer/Footer'
 import { Navbar } from '@/components/NavBar/NavBar'
 import AllProductUser from '@/components/Products/AllProductUser/AllProductUser'
+import ProductDetails from '@/components/Products/ProductDetails/ProductDetails'
+import ShopPage from '@/components/Products/ShopProducts/ShopProducts'
 import React from 'react'
 
 function page() {
   return (
     <div>
-      <Navbar />
+      
+      
       <Carousel />
       <FeaturesBanner />
       <AllProductUser />
