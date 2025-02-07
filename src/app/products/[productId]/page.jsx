@@ -3,12 +3,12 @@ import ProductDetails from '@/components/Products/ProductDetails/ProductDetails'
 import React from 'react'
 
 function page({params}) {
-    if(!params.productId){
+    if(!params?.productId){
         return 
     }
   return (
     <div>
-      <ProductDetails productId={params.productId}/>
+      <ProductDetails productId={params?.productId}/>
       <FeaturesBanner />
     </div>
   )

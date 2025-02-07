@@ -18,37 +18,34 @@ import {
 // This is sample data.
 const data = {
   navMain: [
+   
+    {
+      title: "Categorias",
+      url: "#",
+      items: [
+        {
+          title: "Crear Categoria ",
+          url: "/dashboard/categories",
+        },
+       
+
+      ],
+    },
     {
       title: "Productos",
       url: "#",
       items: [
         {
           title: "Agregar Productos",
-          url: "/dashboard/products",
+          url: "/dashboard/add-products",
         },
         {
           title: "Lista de Productos",
-          url: "#",
+          url: "/dashboard/list-products",
         }
         
       ],
-    },
-    {
-      title: "Categorias",
-      url: "#",
-      items: [
-        {
-          title: "Crear Categoria",
-          url: "#",
-        },
-        {
-          title: "Lista de Categorias",
-          url: "#",
-        },
-        
-
-      ],
-    },
+    }
     
   ],
 }
@@ -62,7 +59,7 @@ export function AppSidebar({
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
-              <a href="#">
+              <a href="/dashboard">
                 <div
                   className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
                   <GalleryVerticalEnd className="size-4" />

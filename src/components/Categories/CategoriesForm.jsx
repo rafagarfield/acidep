@@ -25,7 +25,7 @@ function CategoriesForm({ categories, setCategories }) {
   };
 
   return (
-    <div className="flex justify-center w-full lg:w-1/2">
+    <div className="flex justify-center w-full ">
       <div className=" shadow-xl rounded-lg p-6 w-full max-w-md">
         <h2 className="text-2xl font-semibold text-gray-800 text-center mb-4">
           Añadir Categoría
@@ -39,7 +39,7 @@ function CategoriesForm({ categories, setCategories }) {
               name="nameCategory"
               value={formData.nameCategory}
               onChange={handleInputChange}
-              placeholder="Ej: Nutrición"
+              placeholder="Ej: Foliares"
               required
               className="mt-2 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
             />

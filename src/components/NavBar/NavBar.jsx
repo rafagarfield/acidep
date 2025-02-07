@@ -228,7 +228,7 @@ export function Navbar() {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link href="/" passHref legacyBehavior>
-                  <NavigationMenuLink className="inline-flex h-10 px-6 py-2 text-sm font-medium hover:text-primary">
+                  <NavigationMenuLink className="inline-flex h-10 px-6 py-2 text-sm font-medium  hover:text-[#004225]">
                     INICIO
                   </NavigationMenuLink>
                 </Link>
@@ -236,7 +236,7 @@ export function Navbar() {
 
               <NavigationMenuItem>
                 <Link href="/shops" passHref legacyBehavior>
-                  <NavigationMenuLink className="inline-flex h-10 px-6 py-2 text-sm font-medium hover:text-primary">
+                  <NavigationMenuLink className="inline-flex h-10 px-6 py-2 text-sm font-medium hover:text-[#004225]">
                     TIENDA
                   </NavigationMenuLink>
                 </Link>
@@ -244,7 +244,7 @@ export function Navbar() {
 
               <NavigationMenuItem>
                 <Link href="/about" passHref legacyBehavior>
-                  <NavigationMenuLink className="inline-flex h-10 px-6 py-2 text-sm font-medium hover:text-primary">
+                  <NavigationMenuLink className="inline-flex h-10 px-6 py-2 text-sm font-medium hover:text-[#004225]">
                     SOBRE NOSOTROS
                   </NavigationMenuLink>
                 </Link>
@@ -252,7 +252,7 @@ export function Navbar() {
 
               <NavigationMenuItem>
                 <Link href="/contact" passHref legacyBehavior>
-                  <NavigationMenuLink className="inline-flex h-10 px-6 py-2 text-sm font-medium hover:text-primary">
+                  <NavigationMenuLink className="inline-flex h-10 px-6 py-2 text-sm font-medium hover:text-[#004225]">
                     CONTACTO
                   </NavigationMenuLink>
                 </Link>

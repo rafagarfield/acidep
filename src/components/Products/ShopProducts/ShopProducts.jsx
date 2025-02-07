@@ -227,7 +227,7 @@ export default function ShopPage() {
 
   return (
     <div className="min-h-screen bg-white m-4">
-      <div className="container py-8">
+      <div className=" py-8">
         <div className="mb-8">
           <nav className="flex space-x-2 text-sm text-muted-foreground">
             <Link href="/">Home</Link>
@@ -237,7 +237,7 @@ export default function ShopPage() {
         </div>
 
         {/* Category Tags - Top */}
-        <div className="mb-8 hidden md:block">
+        <div className="mb-8 ">
           <div className="flex flex-wrap justify-center gap-2">
             {loadingCategories ? (
               [...Array(5)].map((_, i) => (
@@ -254,7 +254,7 @@ export default function ShopPage() {
                   className="rounded-full hover:bg-green-900 hover:text-white"
                   size="lg"
                 >
-                  All
+                  Todos
                 </Button>
                 {categories?.map((category) => (
                   <Button
@@ -277,7 +277,7 @@ export default function ShopPage() {
 
         <div className="grid gap-8">
           <div className="space-y-6">
-            <div className="grid gap-6 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 grid-cols-2  md:grid-cols-3 lg:grid-cols-4">
               {loadingProducts
                 ? [...Array(8)].map((_, i) => (
                     <div key={i} className="flex flex-col gap-2">
@@ -324,3 +324,4 @@ export default function ShopPage() {
     </div>
   );
 }
+

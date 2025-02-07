@@ -130,7 +130,7 @@ export default function Footer() {
               <h3 className="text-xl font-bold">ACIDEP</h3>
             </div>
             <p className="text-green-100">
-              Soluciones innovadoras para el cultivo. Comprometidos con el desarrollo agrícola sostenible.
+              Soluciones innovadoras para el cultivo.
             </p>
             {/* Redes Sociales */}
             <div className="flex gap-4 pt-4">

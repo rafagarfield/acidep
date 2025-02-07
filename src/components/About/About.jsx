@@ -52,7 +52,7 @@ export default function About() {
           <div className="group">
             <div className="relative h-64 mb-6 overflow-hidden rounded-2xl">
               <Image
-                src="https://img.freepik.com/foto-gratis/cerrar-imagen-mano-jardinero-sosteniendo-arbol-joven-planta_1150-28364.jpg?t=st=1738728213~exp=1738731813~hmac=f5ba2582d391dfa5d70683704ffdb02dee639570e600751bf0447bdbda79a248&w=1060"
+                src="https://img.freepik.com/foto-gratis/trabajador-agricola-que-conduce-tractor-rociando-prado-verde-generado-ia_188544-18554.jpg?t=st=1738861857~exp=1738865457~hmac=890a2b69406dc9dfad5c081488b47cd511b1f5638e8ec54f81e68fd2d16ee098&w=1380"
                 alt="Tecnología agrícola moderna"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"

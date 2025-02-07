@@ -532,7 +532,7 @@ function ProductList() {
                   <td className="border border-gray-300 px-4 py-2"><a href={product.technicalSheetUrl} className="text-blue-500 underline">Ver PDF</a></td>
                   <td className="border border-gray-300 px-4 py-2"><a href={product.safetySheetUrl} className="text-blue-500 underline">Ver PDF</a></td>
                   <td className="border border-gray-300 px-4 py-2">
-                    <button onClick={() => handleEdit(product)} className="px-2 py-1 bg-blue-500 text-white rounded mr-2">Editar</button>
+                    <button onClick={() => handleEdit(product)} className="px-2 py-1 bg-blue-500 text-white rounded mr-2 mb-2">Editar</button>
                     <button onClick={() => handleDelete(product.id, product)} className="px-2 py-1 bg-red-500 text-white rounded">Eliminar</button>
                   </td>
                 </tr>

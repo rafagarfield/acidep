@@ -209,13 +209,53 @@ export default function ProductDetails({ productId }) {
             </Button>
           </div>
 
-          <Button
+          {/* <Button
             size="lg"
             className="w-full sm:w-auto"
             onClick={() => console.log("Comprar clicked")}
           >
             Comprar Ahora
-          </Button>
+          </Button> */}
+          {/* <Button
+            size="lg"
+            className="w-full sm:w-auto"
+            onClick={() => {
+              const productName = encodeURIComponent(product[0].productName);
+              const productLink = encodeURIComponent(window.location.href);
+              const message = `Hola, estoy interesado en el producto: *${productName}*.\nAquí está el enlace: ${productLink}`;
+              const whatsappUrl = `https://wa.me/51929497479?text=${message}`;
+
+              // Redirigir a WhatsApp
+              window.location.href = whatsappUrl;
+            }}
+          >
+            Comprar Ahora
+          </Button> */}
+          <div className="flex justify-start ">
+            <Button
+              size="lg"
+              className=" bg-green-700 hover:bg-green-800 text-white font-semibold w-3/4  text-[16px] "
+              onClick={() => {
+                const phone = "51917669029"; // Número de WhatsApp
+                const productName = encodeURIComponent(product[0].productName);
+                const productLink = encodeURIComponent(window.location.href);
+                const message = `Hola, estoy interesado en el producto: *${productName}*.\nAquí está el enlace: ${productLink}`;
+
+                const whatsappWeb = `https://web.whatsapp.com/send?phone=${phone}&text=${message}`;
+                const whatsappMobile = `https://wa.me/${phone}?text=${message}`;
+
+                // Detectar si es móvil o escritorio
+                const isMobile =
+                  /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                    navigator.userAgent
+                  );
+
+                window.open(isMobile ? whatsappMobile : whatsappWeb, "_blank");
+              }}
+            >
+              Comprar Ahora
+            </Button>
+          </div>
         </div>
       </div>
     </div>
