@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation"
 import { Navbar } from "../NavBar/NavBar"
 import Footer from "../Footer/Footer"
+import FloatingWhatsApp from "../FloatingWhatsApp/FloatingWhatsApp"
 
 
 function WrapperLayout({children}) {
@@ -12,6 +13,7 @@ function WrapperLayout({children}) {
     <>
       {!hideAdmin && <Navbar/> }
       {children}
+      {!hideAdmin && <FloatingWhatsApp/>}
       {!hideAdmin && <Footer/> }
 
     </>
