@@ -230,7 +230,7 @@ export default function ShopPage() {
       <div className=" py-8">
         <div className="mb-8">
           <nav className="flex space-x-2 text-sm text-muted-foreground">
-            <Link href="/">Home</Link>
+            <Link href="/">Inicio</Link>
             <span>/</span>
             <span className="font-medium text-foreground">Tienda</span>
           </nav>
@@ -251,7 +251,11 @@ export default function ShopPage() {
                 <Button
                   onClick={handleAllProducts}
                   variant="outline"
-                  className="rounded-full hover:bg-green-900 hover:text-white"
+                  className={`rounded-full hover:bg-green-900 hover:text-white ${
+                    categoryId === "all" || !categoryId
+                      ? "bg-green-900 text-white"
+                      : ""
+                  }`}
                   size="lg"
                 >
                   Todos
@@ -264,7 +268,11 @@ export default function ShopPage() {
                     }}
                     key={category.id}
                     variant="outline"
-                    className="rounded-full hover:bg-green-900 hover:text-white"
+                    className={`rounded-full hover:bg-green-900 hover:text-white ${
+                      categoryId === category.id
+                        ? "bg-green-900 text-white"
+                        : ""
+                    }`}
                     size="lg"
                   >
                     {category.category}
@@ -320,8 +328,8 @@ export default function ShopPage() {
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );
 }
-
