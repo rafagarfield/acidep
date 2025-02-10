@@ -1,11 +1,10 @@
+import Login from '@/components/Login/Login'
 import React from 'react'
 
 function page() {
   return (
     <div>
-      <button>
-        google
-      </button>
+      <Login />
     </div>
   )
 }
