@@ -1,5 +1,9 @@
+
+"use client"
 import * as React from "react"
 import { GalleryVerticalEnd } from "lucide-react"
+import { auth } from "@/firebase/firebaseConfig"
+import { useRouter } from "next/navigation"
 
 import {
   Sidebar,
@@ -14,6 +18,8 @@ import {
   SidebarMenuSubItem,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import { Button } from "./ui/button";
+import { signOut } from "firebase/auth"
 
 // This is sample data.
 const data = {
@@ -50,9 +56,18 @@ const data = {
   ],
 }
 
-export function AppSidebar({
-  ...props
-}) {
+export function AppSidebar({...props}) 
+{
+  const router = useRouter();
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      router.push("/login"); // Redirige a la página de inicio al cerrar sesión
+    } catch (error) {
+      console.error("Error al cerrar sesión:", error);
+    }
+  };
+
   return (
     (<Sidebar {...props}>
       <SidebarHeader>
@@ -100,6 +115,11 @@ export function AppSidebar({
         </SidebarGroup>
       </SidebarContent>
       <SidebarRail />
+      <SidebarContent>
+        <Button className="m-6" onClick={handleLogout}>
+          Cerrar Sesión
+        </Button>
+      </SidebarContent>
     </Sidebar>)
   );
 }
