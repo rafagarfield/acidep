@@ -40,7 +40,6 @@ export default function Login() {
 
         setFormData({ email: "", password: "" });
 
-        // Redirigir después de un breve retraso para que el toast sea visible
         setTimeout(() => {
           router.push("/dashboard");
         }, 2000);
@@ -61,15 +60,17 @@ export default function Login() {
   };
 
   return (
-    <div className="flex flex-col bg-green-700 justify-center items-center h-screen gap-6">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-green-700 px-4">
       <ToastContainer />
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-6 max-w-2xl w-full bg-green-300 rounded-lg shadow-lg p-20"
+        className="flex flex-col gap-6 bg-green-200 rounded-lg shadow-lg p-6 md:p-10 lg:p-20 w-full max-w-sm md:max-w-lg lg:max-w-2xl"
       >
-        <label htmlFor="email">Correo</label>
+        <label htmlFor="email" className="text-lg md:text-xl font-medium">
+          Correo
+        </label>
         <input
-          className="rounded-lg h-[50px] p-2 text-gray-600"
+          className="rounded-lg h-12 p-2 text-gray-600 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
           type="email"
           id="email"
           name="email"
@@ -78,10 +79,12 @@ export default function Login() {
           required
         />
 
-        <label htmlFor="password">Contraseña</label>
+        <label htmlFor="password" className="text-lg md:text-xl font-medium">
+          Contraseña
+        </label>
         <div className="relative w-full">
           <input
-            className="rounded-lg h-[50px] p-2 text-gray-600 w-full pr-12"
+            className="rounded-lg h-12 p-2 pr-12 text-gray-600 border border-gray-300 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
             type={showPassword ? "text" : "password"}
             id="password"
             name="password"
@@ -100,7 +103,7 @@ export default function Login() {
 
         <button
           type="submit"
-          className="w-full bg-green-600 rounded-lg text-white font-medium hover:bg-green-500 h-[50px]"
+          className="w-full bg-green-600 rounded-lg text-white font-medium hover:bg-green-500 h-12 transition-all duration-300"
         >
           Iniciar Sesión
         </button>
