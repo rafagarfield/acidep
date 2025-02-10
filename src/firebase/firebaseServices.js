@@ -8,8 +8,9 @@ import {
   query,
   where,
 } from "firebase/firestore";
-import { db, storage } from "./firebaseConfig";
+import { db, storage,auth } from "./firebaseConfig";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 export const addCategory = async (category) => {
   try {
@@ -235,4 +236,27 @@ export const getProductById = async (productId) => {
   const productsCategory = await getDocs(q);
   const product= productsCategory.docs.map((doc) => doc.data())
   return product;
+};
+
+
+export const loginUser = async (email, password) => {
+
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    return userCredential.user;
+  } catch (error) {
+    console.error("Error en el inicio de sesión:", error);
+    throw error;
+  }
+};
+
+// Cerrar sesión
+export const logoutUser = async () => {
+  try {
+    await signOut(auth);
+    console.log("Usuario ha cerrado sesión");
+  } catch (error) {
+    console.error("Error al cerrar sesión:", error);
+    throw error;
+  }
 };
