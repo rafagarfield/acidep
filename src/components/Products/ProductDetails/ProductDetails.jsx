@@ -367,7 +367,7 @@ export default function ProductDetails({ productId }) {
               size="lg"
               className="bg-green-700 hover:bg-green-800 text-white font-semibold w-3/4 text-[16px]"
               onClick={() => {
-                const phone = "51917669020";
+                const phone = "51917669029";
                 const productName = encodeURIComponent(product[0].productName);
                 const productLink = encodeURIComponent(window.location.href);
                 const message = `Hola, estoy interesado en el producto: *${productName}*.\nAquí está el enlace: ${productLink}`;
