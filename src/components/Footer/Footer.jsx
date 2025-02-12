@@ -306,7 +306,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-green-300">Contacto</h3>
             <div className="space-y-2 text-green-100">
-              <p>Teléfono:  993939944</p>
+              <p>Teléfono: (123) 456-7890</p>
               <p>Email: info@acidep.com</p>
               <p>Dirección: Av. Agricultura 123</p>
               <p>Ciudad Agrícola, CP 12345</p>
