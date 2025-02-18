@@ -49,7 +49,6 @@ export default function ContactPage() {
               </p>
               <div className="flex space-x-4">
                 <SocialLink href="#" icon={<Facebook className="w-6 h-6" />} name="Facebook" />
-                <SocialLink href="#" icon={<Twitter className="w-6 h-6" />} name="Twitter" />
                 <SocialLink href="#" icon={<Linkedin className="w-6 h-6" />} name="LinkedIn" />
               </div>
             </CardContent>
