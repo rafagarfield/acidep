@@ -1,14 +1,28 @@
+"use client";
+
 import { FaWhatsapp } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 const FloatingWhatsApp = () => {
   const phoneNumber = "929497479"; // Reemplaza con tu número de WhatsApp
-  const message = encodeURIComponent("¡Hola! Me gustaría obtener más información sobre sus servicios."); // Mensaje personalizado
+  const message = encodeURIComponent(
+    "¡Hola! Me gustaría obtener más información sobre sus servicios."
+  ); // Mensaje personalizado
 
-  // Detectar si el usuario está en escritorio o móvil
-  const isMobile = /iPhone|Android/i.test(navigator.userAgent);
-  const whatsappURL = isMobile
-    ? `https://wa.me/${phoneNumber}?text=${message}`
-    : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+  const [whatsappURL, setWhatsappURL] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const isMobile = /iPhone|Android/i.test(navigator.userAgent);
+      setWhatsappURL(
+        isMobile
+          ? `https://wa.me/${phoneNumber}?text=${message}`
+          : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${message}`
+      );
+    }
+  }, []);
+
+  if (!whatsappURL) return null; // Evita renderizar hasta que se determine el enlace correcto
 
   return (
     <a
