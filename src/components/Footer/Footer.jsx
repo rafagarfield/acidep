@@ -277,7 +277,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {categories.map((category) => (
                 <li key={category.id}>
-                  <Link href={`/productos/${category.category.toLowerCase()}`} className="text-green-100 hover:text-white transition-colors">
+                  <Link href={`/shops`} className="text-green-100 hover:text-white transition-colors">
                     {category.category}
                   </Link>
                 </li>
@@ -289,16 +289,16 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-green-300">Enlaces</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/inicio" className="text-green-100 hover:text-white transition-colors">Inicio</Link>
+                <Link href="/" className="text-green-100 hover:text-white transition-colors">Inicio</Link>
               </li>
               <li>
-                <Link href="/tienda" className="text-green-100 hover:text-white transition-colors">Tienda</Link>
+                <Link href="/shops" className="text-green-100 hover:text-white transition-colors">Tienda</Link>
               </li>
               <li>
-                <Link href="/sobre-nosotros" className="text-green-100 hover:text-white transition-colors">Sobre Nosotros</Link>
+                <Link href="/about" className="text-green-100 hover:text-white transition-colors">Sobre Nosotros</Link>
               </li>
               <li>
-                <Link href="/contacto" className="text-green-100 hover:text-white transition-colors">Contacto</Link>
+                <Link href="/contact" className="text-green-100 hover:text-white transition-colors">Contacto</Link>
               </li>
             </ul>
           </div>
@@ -309,7 +309,7 @@ export default function Footer() {
               <p>Teléfono:+51 929 497 479</p>
               <p>Email: info@acidep.com</p>
               <p>Dirección: Av. Agricultura 123</p>
-              <p>Ciudad Agrícola, CP 12345</p>
+              
             </div>
           </div>
         </div>
