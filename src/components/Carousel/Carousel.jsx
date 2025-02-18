@@ -29,7 +29,6 @@ export function Carousel() {
     const fetchCarouselImages = async () => {
       const images = await getCarouselImages()
       const imagesD = images[0].images
-      console.log("imagenes", imagesD)
       setDesktopImages(imagesD)
     }
     
