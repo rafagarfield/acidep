@@ -19,22 +19,23 @@ export default function ContactPage() {
                 <ContactItem
                   icon={<Mail className="w-6 h-6 text-green-600" />}
                   title="Correo Electrónico"
-                  content="info@tuempresa.com"
+                  content="acidepsac@gmail.com"
                 />
                 <ContactItem
                   icon={<Phone className="w-6 h-6 text-green-600" />}
                   title="Teléfono"
-                  content="+51 1 234-5678"
+                  content="+51 929 497 479 / +51 929 497 479"
                 />
                 <ContactItem
                   icon={<MapPin className="w-6 h-6 text-green-600" />}
                   title="Dirección"
-                  content="Av. Principal 123, Lima 15046, Perú"
+                  content="Jr. Sucre 374, Imperial, Cañete - Lima."
                 />
                 <ContactItem
                   icon={<Clock className="w-6 h-6 text-green-600" />}
                   title="Horario de Atención"
-                  content="Lunes a Viernes: 9:00 AM - 6:00 PM"
+                  content="Lunes a Viernes: 7:00 a.m a 7:00 pm 
+                  - Sábados: 7:00 a.m a 6:00 pm"
                 />
               </div>
             </CardContent>
@@ -48,8 +49,8 @@ export default function ContactPage() {
                 actualizaciones.
               </p>
               <div className="flex space-x-4">
-                <SocialLink href="#" icon={<Facebook className="w-6 h-6" />} name="Facebook" />
-                <SocialLink href="#" icon={<Linkedin className="w-6 h-6" />} name="LinkedIn" />
+                <SocialLink href="https://www.facebook.com/Acidep.pe/" icon={<Facebook className="w-6 h-6" />} name="Facebook" />
+                <SocialLink href="https://www.linkedin.com/in/acidep-sac-386b92351/" icon={<Linkedin className="w-6 h-6" />} name="LinkedIn" />
               </div>
             </CardContent>
           </Card>
