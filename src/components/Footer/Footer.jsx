@@ -315,9 +315,9 @@ export default function Footer() {
         {/* Copyright */}
         <div className="text-center pt-8 border-t border-green-700 ">
           <p className="text-green-200">&copy; {new Date().getFullYear()} ACIDEP. Todos los derechos reservados.</p>
-          <p className="font-thin mt-4">Página desarrollada por 
+          {/* <p className="font-thin mt-4">Página desarrollada por 
           <a className="text-white font-normal  hover:text-blue-600 transition-colors" href="https://rafaelgarcia.vercel.app/" target="_blank" rel="noopener noreferrer" > Rafael Garcia </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>
