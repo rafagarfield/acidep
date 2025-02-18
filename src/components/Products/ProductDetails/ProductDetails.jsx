@@ -383,7 +383,7 @@ export default function ProductDetails({ productId }) {
                 window.open(isMobile ? whatsappMobile : whatsappWeb, "_blank");
               }}
             >
-              Comprar Ahora
+              Cotizar Ahora
             </Button>
           </div>
         </div>
