@@ -51,6 +51,25 @@ const data = {
         }
         
       ],
+    },
+    {
+      title: "Imagenes Para Carrusel",
+      url: "#",
+      items: [
+        // {
+        //   title: "Agregar Imagenes",
+        //   url: "/dashboard/add-images",
+        // },
+        {
+          title: "Lista IMG Grandes",
+          url: "/dashboard/list-image",
+        },
+        {
+          title: "Lista IMG Mobile",
+          url: "/dashboard/list-image-mobile",
+        }
+        
+      ],
     }
     
   ],
