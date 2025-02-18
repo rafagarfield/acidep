@@ -1,35 +1,4 @@
-// import React from "react";
 
-// function CardProducts() {
-//   return (
-//     <div className="flex flex-col gap-2">
-//       {/* Contenedor de la imagen */}
-//       <div className="p-2 rounded-[30px] flex justify-center items-center">
-//         <div className="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] lg:w-[250px] lg:h-[250px]">
-//           <img
-//             src="/product1.png"
-//             alt="product1"
-//             className="w-full h-full"
-//           />
-//         </div>
-//       </div>
-
-//       {/* Título */}
-//       <h2 className="text-[14px] lg:text-[16px] font-bold text-center">
-//         Watermelon
-//       </h2>
-
-//       {/* Categoría */}
-//       <div className="flex justify-center">
-//         <p className="text-[#8B8B8B] font-medium text-sm sm:text-base">
-//           Categoria
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default CardProducts;
 "use client"
 import React, { useReducer, useState } from "react";
 import { Search } from "lucide-react";
