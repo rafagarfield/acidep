@@ -5,20 +5,21 @@ import Image from "next/image"
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react"
 
 const desktopImages = [
-  { id: 1, url: "https://innovagro.pe/wp-content/uploads/2023/10/REVIVEXL-BANNER.webp" },
-  { id: 2, url: "https://innovagro.pe/wp-content/uploads/2023/10/SILWAY.webp" },
-  { id: 3, url: "https://innovagro.pe/wp-content/uploads/2023/10/BANNER-INNOVAGRO-REVIVE-48.webp" },
-  { id: 4, url: "https://innovagro.pe/wp-content/uploads/2023/10/REVIVEXL-BANNER.webp" },
-  { id: 5, url: "https://innovagro.pe/wp-content/uploads/2023/10/REVIVEXL-BANNER.webp" },
-  { id: 6, url: "https://innovagro.pe/wp-content/uploads/2023/10/REVIVEXL-BANNER.webp" },
-  { id: 7, url: "https://innovagro.pe/wp-content/uploads/2023/10/REVIVEXL-BANNER.webp" }
+  { id: 1, url: "/images/1.webp" },
+  { id: 2, url: "/images/2.webp" },
+  { id: 3, url: "/images/3.webp" },
+  { id: 4, url: "/images/4.webp" },
+  { id: 5, url: "/images/5.webp" },
+  { id: 6, url: "/images/6.webp" }
 ]
 
 const mobileImages = [
-  { id: 1, url: "https://innovagro.pe/wp-content/uploads/2023/10/BANNER-INNOVAGRO-REVIVE-MOVIL.webp" },
-  { id: 2, url: "https://innovagro.pe/wp-content/uploads/2023/10/BANNER-INNOVAGRO-REVIVE-MOVIL.webp" },
-  { id: 3, url: "https://innovagro.pe/wp-content/uploads/2023/10/BANNER-INNOVAGRO-REVIVE-MOVIL.webp" },
-  { id: 4, url: "https://innovagro.pe/wp-content/uploads/2023/10/BANNER-INNOVAGRO-REVIVE-MOVIL.webp" },
+  { id: 1, url: "/images/1.1.webp" },
+  { id: 2, url: "/images/2.1.webp" },
+  { id: 3, url: "/images/3.1.webp" },
+  { id: 4, url: "/images/4.1.webp" },
+  { id: 5, url: "/images/5.1.webp" },
+  { id: 6, url: "/images/6.1.webp" }
 ]
 
 export function Carousel() {
