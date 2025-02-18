@@ -26,7 +26,6 @@ export const getCategories = async () => {
     const categoryRef = collection(db, "categories");
     const querySnapshot = await getDocs(categoryRef);
     const categories = querySnapshot.docs.map((doc) => {
-      console.log("doc", doc.data);
       return {
         id: doc.id, // ID del documento
         ...doc.data(),
@@ -43,7 +42,6 @@ export const updateCategory = async (categoryId, newCategoryData) => {
   try {
     const categoryDocRef = doc(db, "categories", categoryId);
     await updateDoc(categoryDocRef, newCategoryData);
-    console.log("Categoría actualizada correctamente");
   } catch (error) {
     console.error("Error al actualizar la categoría:", error);
   }
@@ -53,7 +51,6 @@ export const deleteCategory = async (categoryId) => {
   try {
     const categoryDocRef = doc(db, "categories", categoryId);
     await deleteDoc(categoryDocRef);
-    console.log("Categoría eliminada correctamente");
   } catch (error) {
     console.error("Error al eliminar la categoría:", error);
   }
@@ -64,8 +61,6 @@ export const deleteCategory = async (categoryId) => {
  * @param {Object} product - Objeto con los datos del producto.
  */
 export const addProduct = async (product) => {
-  console.log("Product recibido:", product);
-
   try {
     const {
       productName,
@@ -134,9 +129,7 @@ export const addProduct = async (product) => {
     const productId = result.id;
     const productsRefId=doc(db,"products",productId)
     await updateDoc(productsRefId,{productId});
-    console.log("ref",productId)
     
-    console.log("✅ Producto agregado correctamente");
   } catch (error) {
     console.error("❌ Error agregando producto:", error);
   }
