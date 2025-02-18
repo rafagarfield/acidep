@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const FloatingWhatsApp = () => {
   const phoneNumber = "929497479"; // Reemplaza con tu número de WhatsApp
   const message = encodeURIComponent(
-    "¡Hola! Me gustaría obtener más información sobre sus servicios."
+    "¡Hola! He visto su página web Acidep y me gustaría conocer más sobre sus productos. ¿Podrían brindarme más información?"
   ); // Mensaje personalizado
 
   const [whatsappURL, setWhatsappURL] = useState("");
