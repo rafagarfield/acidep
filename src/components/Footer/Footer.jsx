@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Facebook,Linkedin} from "lucide-react";
 import { useEffect, useState } from "react";
 import { getCategories } from "@/firebase/firebaseServices";
+import {  FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   const [categories, setCategories] = useState([]);
@@ -35,6 +36,15 @@ export default function Footer() {
               
               <a href="https://www.linkedin.com/in/acidep-sac-386b92351/" target="_blank" rel="noopener noreferrer" className="text-green-200 hover:text-white transition-colors">
                 <Linkedin className="w-6 h-6" />
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@acidep.s.a.c" // Reemplaza con el link correcto
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-200 hover:text-white transition-colors"
+              >
+                <FaTiktok className="w-6 h-6" />
               </a>
             </div>
           </div>
