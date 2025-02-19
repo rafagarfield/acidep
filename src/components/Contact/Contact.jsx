@@ -1,12 +1,23 @@
-import { Mail, Phone, MapPin, Clock, Facebook, Twitter, Linkedin } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Facebook,
+  Twitter,
+  Linkedin,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { FaTiktok } from "react-icons/fa";
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-gray-100">
       <header className="bg-green-800 text-white py-6">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl sm:text-4xl font-bold text-center">Contáctanos</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-center">
+            Contáctanos
+          </h1>
         </div>
       </header>
 
@@ -14,7 +25,9 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-semibold text-green-800 mb-6">Información de Contacto</h2>
+              <h2 className="text-2xl font-semibold text-green-800 mb-6">
+                Información de Contacto
+              </h2>
               <div className="space-y-6">
                 <ContactItem
                   icon={<Mail className="w-6 h-6 text-green-600" />}
@@ -24,7 +37,7 @@ export default function ContactPage() {
                 <ContactItem
                   icon={<Phone className="w-6 h-6 text-green-600" />}
                   title="Teléfono"
-                  content="+51 929 497 479 / +51 929 497 479"
+                  content="+51 929497479 / +51 917901262"
                 />
                 <ContactItem
                   icon={<MapPin className="w-6 h-6 text-green-600" />}
@@ -43,14 +56,29 @@ export default function ContactPage() {
 
           <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-semibold text-green-800 mb-6">Síguenos</h2>
+              <h2 className="text-2xl font-semibold text-green-800 mb-6">
+                Síguenos
+              </h2>
               <p className="text-gray-600 mb-6">
-                Mantente conectado con nosotros a través de nuestras redes sociales para las últimas noticias y
-                actualizaciones.
+                Mantente conectado con nosotros a través de nuestras redes
+                sociales para las últimas noticias y actualizaciones.
               </p>
               <div className="flex space-x-4">
-                <SocialLink href="https://www.facebook.com/Acidep.pe/" icon={<Facebook className="w-6 h-6" />} name="Facebook" />
-                <SocialLink href="https://www.linkedin.com/in/acidep-sac-386b92351/" icon={<Linkedin className="w-6 h-6" />} name="LinkedIn" />
+                <SocialLink
+                  href="https://www.facebook.com/Acidep.pe/"
+                  icon={<Facebook className="w-6 h-6" />}
+                  name="Facebook"
+                />
+                <SocialLink
+                  href="https://www.linkedin.com/in/acidep-sac-386b92351/"
+                  icon={<Linkedin className="w-6 h-6" />}
+                  name="LinkedIn"
+                />
+                <SocialLink
+                  href="https://www.tiktok.com/@acidep.s.a.c"
+                  icon={<FaTiktok className="w-6 h-6 text-green-800" />}
+                  name="TikTok"
+                />
               </div>
             </CardContent>
           </Card>
@@ -58,12 +86,11 @@ export default function ContactPage() {
 
         <div className="mt-12 text-center">
           <p className="text-gray-600">
-            Estamos aquí para ayudarte. No dudes en contactarnos por cualquier consulta o información adicional.
+            Estamos aquí para ayudarte. No dudes en contactarnos por cualquier
+            consulta o información adicional.
           </p>
         </div>
       </main>
-
-     
     </div>
   );
 }
