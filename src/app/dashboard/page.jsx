@@ -1,10 +1,12 @@
 import { Package2, Plus, Tags } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
-
+import { redirect } from 'next/navigation'
+import ProtectedRoute from '@/components/ProtectedRoute/ProtectedRoute'
 export default function page() {
   return (
-    <div className="flex flex-1 flex-col gap-6 p-6">
+    <ProtectedRoute>
+      <div className="flex flex-1 flex-col gap-6 p-6">
               {/* Contenedor de botones grandes */}
               <div className="flex flex-col gap-6 ">
               <Link href="/dashboard/categories">
@@ -34,5 +36,7 @@ export default function page() {
               </div>
     
             </div>
+    </ProtectedRoute>
+    
   )
 }
