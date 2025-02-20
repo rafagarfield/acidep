@@ -1,11 +1,12 @@
 import CarouselManager from '@/components/ListImage/ListImage'
+import ProtectedRoute from '@/components/ProtectedRoute/ProtectedRoute'
 import React from 'react'
 
 function page() {
   return (
-    <div>
+    <ProtectedRoute>
       <CarouselManager/>
-    </div>
+    </ProtectedRoute>
   )
 }
 
