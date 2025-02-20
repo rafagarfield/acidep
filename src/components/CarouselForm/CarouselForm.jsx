@@ -19,6 +19,7 @@ export default function CarouselForm() {
     }
   };
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validFiles = files.filter((file) => file !== null);
@@ -33,6 +34,8 @@ export default function CarouselForm() {
     setImages(Array(6).fill(null));
     setFiles(Array(6).fill(null));
   };
+
+  
 
   return (
     <div className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg">
