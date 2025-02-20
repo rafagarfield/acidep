@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import { useRouter } from "next/navigation";
 import { Eye, EyeOff } from "lucide-react";
 import { loginUser } from "@/firebase/firebaseServices";
@@ -10,12 +10,21 @@ import "react-toastify/dist/ReactToastify.css";
 export default function Login() {
   const router = useRouter();
 
+ 
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
 
   const [showPassword, setShowPassword] = useState(false);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      router.push("/dashboard");
+    }
+  }, [router]);
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,8 +35,10 @@ export default function Login() {
 
     try {
       const user = await loginUser(formData.email, formData.password);
+      console.log(user);
 
       if (user) {
+        localStorage.setItem("user", JSON.stringify(user));
         toast.success("¡Inicio de sesión exitoso!", {
           position: "top-right",
           autoClose: 2000,
