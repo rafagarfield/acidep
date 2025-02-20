@@ -1,11 +1,12 @@
 import CarouselFormMobile from '@/components/CarouselFormMobile/CarouselFormMobile'
+import ProtectedRoute from '@/components/ProtectedRoute/ProtectedRoute'
 import React from 'react'
 
 function page() {
   return (
-    <div>
+    <ProtectedRoute>
       <CarouselFormMobile/>
-    </div>
+    </ProtectedRoute>
   )
 }
 
