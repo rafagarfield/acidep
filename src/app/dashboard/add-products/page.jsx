@@ -1,11 +1,12 @@
 import ProductForm from '@/components/Products/ProductForm'
+import ProtectedRoute from '@/components/ProtectedRoute/ProtectedRoute'
 import React from 'react'
 
 function page() {
   return (
-    <div>
+    <ProtectedRoute>
       <ProductForm />
-    </div>
+    </ProtectedRoute>
   )
 }
 
