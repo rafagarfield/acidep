@@ -1,12 +1,13 @@
 import ProductForm from '@/components/Products/ProductForm'
-import ProtectedRoute from '@/components/ProtectedRoute/ProtectedRoute'
+import ProtectDynamicRouteClient from '@/components/ProtectDynamicRouteClient/ProtectDynamicRouteClient'
+import ProtectedRoute, { ProtectedRouteDynamic } from '@/components/ProtectedRoute/ProtectedRoute'
 import React from 'react'
 
 function page() {
   return (
-    <ProtectedRoute>
+    <ProtectDynamicRouteClient>
         <ProductForm />
-    </ProtectedRoute>
+    </ProtectDynamicRouteClient>
   )
 }
 
