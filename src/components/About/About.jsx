@@ -108,7 +108,7 @@ export default function About() {
         {/* Sección de Estadísticas */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { number: "15+", label: "Años de Experiencia" },
+            { number: "3+", label: "Años de Experiencia" },
             { number: "1000+", label: "Clientes Satisfechos" },
             { number: "50+", label: "Productos Especializados" },
             { number: "24/7", label: "Soporte Técnico" },
