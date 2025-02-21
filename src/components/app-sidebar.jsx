@@ -81,6 +81,7 @@ export function AppSidebar({...props})
   const handleLogout = async () => {
     try {
       await signOut(auth);
+      localStorage.removeItem("user"); // Elimina el token de autenticación del localStorage
       router.push("/login"); // Redirige a la página de inicio al cerrar sesión
     } catch (error) {
       console.error("Error al cerrar sesión:", error);
