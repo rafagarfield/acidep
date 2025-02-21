@@ -1,11 +1,14 @@
 import CarouselForm from '@/components/CarouselForm/CarouselForm'
-import ProtectedRoute from '@/components/ProtectedRoute/ProtectedRoute'
+import ProtectDynamicRouteClient from '@/components/ProtectDynamicRouteClient/ProtectDynamicRouteClient'
+import { ProtectedRouteDynamic } from '@/components/ProtectedRoute/ProtectedRoute'
+// import ProtectedRoute from '@/components/ProtectedRoute/ProtectedRoute'
 import React from 'react'
 
 export default function page() {
+  
   return (
-    <ProtectedRoute>
+    <ProtectDynamicRouteClient>
       <CarouselForm/>
-    </ProtectedRoute>
+    </ProtectDynamicRouteClient>
   )
 }
