@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Users, Mail, Phone, MapPin } from "lucide-react"
 
-export default function Home() {
+export default function Hiring() {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow">
