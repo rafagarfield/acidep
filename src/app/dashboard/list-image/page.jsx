@@ -1,12 +1,13 @@
 import CarouselManager from '@/components/ListImage/ListImage'
-import ProtectedRoute from '@/components/ProtectedRoute/ProtectedRoute'
+import ProtectDynamicRouteClient from '@/components/ProtectDynamicRouteClient/ProtectDynamicRouteClient'
+import ProtectedRoute, { ProtectedRouteDynamic } from '@/components/ProtectedRoute/ProtectedRoute'
 import React from 'react'
 
 function page() {
   return (
-    <ProtectedRoute>
+    <ProtectDynamicRouteClient>
       <CarouselManager/>
-    </ProtectedRoute>
+    </ProtectDynamicRouteClient>
   )
 }
 
