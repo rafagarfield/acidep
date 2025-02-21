@@ -33,8 +33,8 @@ export function Navbar() {
           </SheetTrigger>
           <SheetContent side="left" className="w-full max-w-md">
             <nav className="flex flex-col space-y-4 px-6">
-              {["/", "/shops", "/about", "/contact"].map((path, index) => {
-                const labels = ["INICIO", "TIENDA", "SOBRE NOSOTROS", "CONTACTO"];
+              {["/", "/shops", "/about", "/contact","/hiring"].map((path, index) => {
+                const labels = ["INICIO", "TIENDA", "SOBRE NOSOTROS", "CONTACTO","TRABAJA CON NOSOTROS"];
                 return (
                   <Link
                     key={index}
@@ -62,8 +62,8 @@ export function Navbar() {
 
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
-              {["/", "/shops", "/about", "/contact"].map((path, index) => {
-                const labels = ["INICIO", "TIENDA", "SOBRE NOSOTROS", "CONTACTO"];
+              {["/", "/shops", "/about", "/contact","/hiring"].map((path, index) => {
+                const labels = ["INICIO", "TIENDA", "SOBRE NOSOTROS", "CONTACTO","TRABAJA CON NOSOTROS"];
                 return (
                   <NavigationMenuItem key={index}>
                     <Link href={path} passHref legacyBehavior>
