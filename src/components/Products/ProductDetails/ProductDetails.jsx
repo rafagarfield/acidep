@@ -94,7 +94,7 @@ export default function ProductDetails({ productId }) {
               alt={product[0].productName}
               width={500}
               height={500}
-              className="object-contain w-[400px] h-[400px] transition-transform duration-300 ease-in-out group-hover:scale-110"
+              className="object-contain w-[400px] h-[400px] transition-transform duration-300 ease-in-out group-hover:scale-[2.5]"
               style={{
                 transformOrigin: `${position.x}% ${position.y}%`,
               }}
