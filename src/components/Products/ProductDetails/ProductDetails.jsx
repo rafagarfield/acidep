@@ -89,7 +89,7 @@ export default function ProductDetails({ productId }) {
             onMouseMove={handleMouseMove}
             onMouseLeave={() => setPosition({ x: 50, y: 50 })}
           >
-            <Image
+            {/* <Image
               src={product[0].imageUrl}
               alt={product[0].productName}
               width={500}
@@ -99,6 +99,17 @@ export default function ProductDetails({ productId }) {
                 transformOrigin: `${position.x}% ${position.y}%`,
               }}
               priority
+            /> */}
+             <img
+              src={product[0].imageUrl}
+              alt={product[0].productName}
+              width={500}
+              height={500}
+              className="object-contain w-[400px] h-[400px] transition-transform duration-300 ease-in-out group-hover:scale-[2.5]"
+              style={{
+                transformOrigin: `${position.x}% ${position.y}%`,
+              }}
+              loading="lazy"
             />
           </div>
         </div>
