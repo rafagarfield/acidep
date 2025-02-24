@@ -9,7 +9,7 @@ import {
   where,
 } from "firebase/firestore";
 import { db, storage,auth } from "./firebaseConfig";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { ref, uploadBytes, getDownloadURL, deleteObject } from "firebase/storage";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 export const addCategory = async (category) => {
@@ -448,5 +448,69 @@ export const editImageMobile = async (docId, oldImageUrl, newFile) => {
     console.log("✅ Imagen editada correctamente");
   } catch (error) {
     console.error("❌ Error al editar imagen:", error);
+  }
+};
+
+
+
+export const createImageJob = async (file) => {
+  try {
+    if (!file) throw new Error("No se ha seleccionado un archivo.");
+
+    // Subir imagen a Firebase Storage
+    const imageRef = ref(storage, `jobForms/${Date.now()}-${file.name}`);
+    await uploadBytes(imageRef, file);
+    const imageUrl = await getDownloadURL(imageRef);
+
+    // Guardar la URL en Firestore
+    await addDoc(collection(db, "jobApplications"), {
+      imageUrl,
+      createdAt: new Date(),
+    });
+
+    console.log("✅ Imagen subida correctamente a jobApplications");
+    return imageUrl;
+  } catch (error) {
+    console.error("❌ Error al subir la imagen:", error);
+    throw error;
+  }
+};
+
+
+
+
+export const deleteImageJob = async (imageUrl) => {
+  try {
+    // Eliminar imagen de Firebase Storage
+    const imageRef = ref(storage, imageUrl);
+    await deleteObject(imageRef); // ✅ deleteObject ahora está importado
+
+    // Buscar la referencia en Firestore y eliminar el documento
+    const q = query(collection(db, "jobApplications"), where("imageUrl", "==", imageUrl));
+    const querySnapshot = await getDocs(q);
+
+    const deletePromises = querySnapshot.docs.map((document) =>
+      deleteDoc(doc(db, "jobApplications", document.id))
+    );
+
+    await Promise.all(deletePromises); // Esperar la eliminación de todos los documentos
+
+    console.log("✅ Imagen eliminada correctamente.");
+  } catch (error) {
+    console.error("❌ Error al eliminar la imagen:", error);
+    throw error;
+  }
+};
+
+export const getJobImages = async () => {
+  try {
+    const querySnapshot = await getDocs(collection(db, "jobApplications"));
+    return querySnapshot.docs.map((doc) => ({
+      id: doc.id,
+      imageUrl: doc.data().imageUrl,
+    }));
+  } catch (error) {
+    console.error("❌ Error al obtener imágenes:", error);
+    return [];
   }
 };
