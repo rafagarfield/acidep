@@ -70,6 +70,25 @@ const data = {
         }
         
       ],
+    },
+    {
+      title: "Empleos",
+      url: "#",
+      items: [
+        // {
+        //   title: "Agregar Imagenes",
+        //   url: "/dashboard/add-images",
+        // },
+        {
+          title: "Crear empleos",
+          url: "/dashboard/create-job",
+        },
+        {
+          title: "Lista  de empleos",
+          url: "/dashboard/list-job",
+        }
+        
+      ],
     }
     
   ],
@@ -135,7 +154,7 @@ export function AppSidebar({...props})
         </SidebarGroup>
       </SidebarContent>
       <SidebarRail />
-      <SidebarContent>
+      <SidebarContent className="mt-20">
         <Button className="m-6" onClick={handleLogout}>
           Cerrar Sesión
         </Button>
