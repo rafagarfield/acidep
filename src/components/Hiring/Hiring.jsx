@@ -110,7 +110,7 @@ export default function Hiring() {
             </h2>
             <p className="text-xl mb-8 text-gray-700">
               Revisa nuestras convocatorias vigentes y sé parte de una empresa
-              que está transformando la agricultura peruana.
+              que está transformando la agricultura .
             </p>
             <Link
               href="https://www.facebook.com/Acidep.pe/"
