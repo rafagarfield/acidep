@@ -78,8 +78,7 @@ export default function Hiring() {
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Somos una empresa con más de 3 años en el mercado peruano,
-                  comprometida con el desarrollo de la agricultura en nuestro
-                  país.
+                  comprometida con el desarrollo de la agricultura 
                 </p>
                 <p className="text-gray-700 mb-4">
                   Buscamos profesionales apasionados que quieran crecer con
